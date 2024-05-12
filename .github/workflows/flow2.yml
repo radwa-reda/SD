@@ -8,6 +8,9 @@ jobs:
     print_readme:
       runs-on: ubuntu-latest
       steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
       - name: Read README File
         id: read_readme
         run: |
