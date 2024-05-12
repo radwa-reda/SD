@@ -1,1 +1,12 @@
-
+name: firist flow
+on:
+    push
+      
+jobs:
+    track_pr:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Print Message
+        id: generate-token
+        run: echo "Hi, Radwa"
+        
