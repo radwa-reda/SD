@@ -1,1 +1,18 @@
-
+name: Print Readme File
+on:
+    push:
+        branches:
+          - main
+      
+jobs:
+    print_readme:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Read README File
+        id: read_readme
+        run: |
+          README_CONTENT=$(cat README.md)
+          echo "::set-output name=readme::$README_CONTENT"
+      - name: Print README
+        run: |
+            echo "${{ steps.read_readme.outputs.readme }}"
