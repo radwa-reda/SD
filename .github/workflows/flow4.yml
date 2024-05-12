@@ -5,7 +5,7 @@ on:
           - main
       
 jobs:
-    login_docker:
+    run_nginx:
       runs-on: ubuntu-latest
       steps:
       - name: Checkout Repository
